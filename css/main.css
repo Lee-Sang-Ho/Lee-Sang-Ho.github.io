@@ -1,0 +1,50 @@
+.container {
+    width: 100vw;
+    height: 100%;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    margin: 10px;
+}
+
+.header div {
+    display: inline;
+}
+
+.header nav {
+    float: right;
+}
+
+.header ul {
+    right: 20px;
+    margin: 0 15px 0 0;
+    padding: 0;
+    list-style-type: none;
+    display: inline;
+}
+
+.header li {
+    padding: 0 10px;
+    float: left;
+}
+
+.representative-youtube-video {
+    width: 100%;
+    height: 100vh;
+}
+
+.self-introduction {
+    height: 80vh;
+}
+
+.contact-information {
+    height: 20vh;
+}
+
+.youtube-videos {
+    height: 100%;
+}

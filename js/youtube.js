@@ -23,7 +23,6 @@ function setYoutubeIframeAPI(item, i) {
             controls: 0,
             disablekb: 1,
             enablejsapi: 1,
-            origin: 'http://localhost:8080/'
         },
         events: {
             'onReady': onPlayerReady,

@@ -80,14 +80,9 @@ iframe {
     /* transform: translate(-50%, 0%); */
 }
 
-.qwer {
+.representative-youtube-video div {
     position: relative;
     overflow: hidden;
-    width: 100vw;
-    height: 100vh;
-}
-
-.asdf {
     width: 100vw;
     height: 100vh;
 }
@@ -117,13 +112,13 @@ iframe {
 }
 
 #representative-youtube-video-button button {
-    /* overflow: hidden;
+    overflow: hidden;
     width: 50px;
     height: 6px;
     border: 0 none;
-    margin: 0 5px; */
-    /* background-color: white; */
-    background-color: red;
+    margin: 0 5px;
+    background-color: white;
+    /* background-color: red; */
 }
 
 .self-introduction {

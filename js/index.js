@@ -1,2 +1,2 @@
 import '../css/main.css';
-import './youtube.js'
+import './youtube.js';

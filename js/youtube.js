@@ -40,7 +40,7 @@ function pauseOthersYoutubes(target) {
 let backgroundPlayerMap = [];
 
 function setBackgrounPlayer(item, i) {
-    let div1 = document.querySelector("#representative-youtube-video");
+    let div1 = document.querySelector(".representative-youtube-video");
     let div2 = document.createElement('div');
     div2.id = `background-yotube${i}`;
     let div3 = document.createElement('div');
@@ -67,12 +67,12 @@ function setBackgrounPlayer(item, i) {
     button.id = `player-button${i}`;
     
     button.onclick = function() {
-        let view = document.querySelector("#representative-youtube-video");
+        let view = document.querySelector(".representative-youtube-video");
         view.style.transform = `translate(-${i * 100}vw)`;
         backgroundPlayerMap[i].playVideo();
     }
 
-    document.querySelector("#representative-youtube-video-button").append(button);
+    document.querySelector(".representative-youtube-video-button").append(button);
 }
 
 function addBackgroundPlayer() {

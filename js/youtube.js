@@ -42,6 +42,7 @@ let backgroundPlayerMap = [];
 function setBackgrounPlayer(item, i) {
     let div1 = document.querySelector(".representative-youtube-video");
     let div2 = document.createElement('div');
+    div2.className = "background-yotube";
     div2.id = `background-yotube${i}`;
     let div3 = document.createElement('div');
     div3.id = `background-yotube-player${i}`;
@@ -55,6 +56,8 @@ function setBackgrounPlayer(item, i) {
         playerVars: {
             controls: 0,
             disablekb: 1,
+            loop: 1,
+            playlist: item,
             enablejsapi: 1,
         },
         events: {
@@ -88,7 +91,7 @@ function setModalPlayer(el, i) {
 
     let divModal = document.createElement('div');
     let divModalBody = document.createElement('div');
-    let divModalCloseBtn = document.createElement('div');
+    // let divModalCloseBtn = document.createElement('div');
     let divModalBg = document.createElement('div');
 
     let divInfo = document.createElement('div');
@@ -97,7 +100,7 @@ function setModalPlayer(el, i) {
     let divInfoTitle = document.createElement('div');
     let divInfoProductionDate = document.createElement('div');
 
-    divModal.append(divModalBody, divModalCloseBtn, divModalBg);
+    divModal.append(divModalBody, divModalBg);
     divInfo.append(divInfoImg, divInfoType, divInfoTitle, divInfoProductionDate);
     div.append(divModal, divInfo);
 
@@ -105,8 +108,8 @@ function setModalPlayer(el, i) {
     divModal.id = `modal-youtube${i}`;
     divModalBody.className = `modal-youtube-video-body`;
     divModalBody.id = `modal-youtube-player${i}`;
-    divModalCloseBtn.className = `modal-yotube-video-close-btn`;
-    divModalCloseBtn.textContent = "X";
+    // divModalCloseBtn.className = `modal-yotube-video-close-btn`;
+    // divModalCloseBtn.textContent = "X";
     divModalBg.className = "bg";
 
     divInfo.className = `modal-yotube-information`;
@@ -121,14 +124,16 @@ function setModalPlayer(el, i) {
 
     function modalOpen() {
         divModal.classList.remove('hidden');
+        // divModal.scrollIntoView()
     }
 
     function modalClose() {
         divModal.classList.add('hidden');
+        modalPlayerMap[i].pauseVideo();
     }
 
     divInfoImg.addEventListener("click", modalOpen);
-    divModalCloseBtn.addEventListener("click", modalClose);
+    // divModalCloseBtn.addEventListener("click", modalClose);
     divModalBg.addEventListener("click", modalClose);
 
     modalPlayerMap[i] = new YT.Player(divModalBody, {

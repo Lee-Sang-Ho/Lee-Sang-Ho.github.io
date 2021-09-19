@@ -10,6 +10,7 @@ body {
 .container {
     width: 100vw;
     height: 100%;
+    color: #292b2c;
 }
 
 .header {
@@ -19,21 +20,23 @@ body {
     top: 0;
     width: 100%;
     height: 3rem;
-    padding: 20px 0;
+    padding: 5px 0;
     z-index: 9996;
     color: white;
     background-color: rgba(0, 0, 0, 0.7);
-    font-size: 1.5rem;
+    /* font-size: 1.5rem; */
 }
 
 .header div {
     margin: auto 40px;
     padding: 0 10px;
     text-align: center;
+    font-size: 1.5rem;
 }
 
 .header nav {
     margin: auto 40px;
+    font-size: 1rem;
 }
 
 .header ul {
@@ -45,6 +48,10 @@ body {
     margin: 0 30px;
     padding: 0 10px;
     float: left;
+}
+
+.header li:hover {
+    transform:scale(1.2)
 }
 
 .header a {
@@ -112,22 +119,23 @@ body {
 .self-introduction {
     padding: 30px 0;
     border: 1px solid rgb(48, 48, 48);
-    font-size: 1.5rem;
+    font-size: 1rem;
     display: grid;
+    align-items: center;
     grid-template-areas: 
     "img com"
     "img ceo"
     "img des";
-    grid-template-columns: 600px 600px;
-    grid-template-rows: 100px 100px 200px;
-    gap: 0 120px;
+    grid-template-columns: 400px 400px;
+    grid-template-rows: 80px 80px 80px;
+    gap: 0 80px;
 }
 
 .self-introduction-image {
     grid-area: img;
     justify-self: center;
     width: 80%;
-    height: 400px;
+    height: 100%;
 }
 
 .self-introduction-image img {
@@ -137,19 +145,19 @@ body {
 }
 
 .self-introduction-company {
-    padding: 2rem;
+    padding: 1rem;
     grid-area: com;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: bold;
 }
 
 .self-introduction-ceo {
-    padding: 2rem;
+    padding: 1rem;
     grid-area: ceo;
 }
 
 .self-introduction-description {
-    padding: 2rem;
+    padding: 1rem;
     grid-area: des;
 }
 
@@ -158,15 +166,16 @@ body {
     height: 20vh;
     display: flex;
     align-items: center;
+    align-content: center;
     justify-content: center;
     flex-wrap: wrap;
-    background-color: black;
+    background-color: #292b2c;
     color: white;
 }
 
 .contact-information-email {
     padding: 0 10%;
-    font-size: 2rem;
+    font-size: 1rem;
     text-align: center;
 }
 
@@ -175,9 +184,9 @@ body {
     border-radius: 30%;
     padding: calc(5px + 0.5rem) 5px;
     margin: 10px;
-    width: 4rem;
+    width: 3rem;
     text-align: center;
-    font-size: 3rem;
+    font-size: 2rem;
     position: relative;
     bottom: 0.25rem;
 }
@@ -187,9 +196,9 @@ body {
     border-radius: 30%;
     padding: 5px;
     margin: 10px;
-    width: 4rem;
+    width: 3rem;
     text-align: center;
-    font-size: 4rem;
+    font-size: 3rem;
 }
 
 .fa-instagram {
@@ -197,9 +206,9 @@ body {
     border-radius: 30%;
     padding: 5px;
     margin: 10px;
-    width: 4rem;
+    width: 3rem;
     text-align: center;
-    font-size: 4rem;
+    font-size: 3rem;
 }
 
 .youtube-video-list {
@@ -208,9 +217,9 @@ body {
 }
 
 .youtube-videos {
-    width: 1320px;
+    width: 880px;
     height: 100%;
-    min-height: 80vh;
+    min-height: 100vh;
     display: flex;
     flex-wrap: wrap;
     justify-content:flex-start;
@@ -256,27 +265,72 @@ body {
 }
 
 .modal-yotube-information {
-    width: 600px;
-    height: 500px;
-    margin: 30px 30px;
+    width: 400px;
+    height: 300px;
+    margin: 20px 20px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 5px;
+}
+
+.modal-yotube-information-thumbnailImg-box {
+    position: relative;
+    width: 100%;
+    height: 70%;
+    overflow: hidden;
 }
 
 .modal-yotube-information-thumbnailImg {
     width: 100%;
-    height: 70%;
+    height: 100%;
     object-fit: cover;
 }
 
+.fa-play-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 4rem;
+    display: none;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.fa-play-circle::before {
+    /* align-self: center;
+    justify-self: center; */
+}
+
+/* .modal-yotube-information-thumbnailImg:hover {
+    transform: scale(1.1);
+    transition: 1s ease;
+} */
+
+.modal-yotube-information-thumbnailImg-box:hover .fa-play-circle {
+    display: flex;
+}
+
+.modal-yotube-information-thumbnailImg-box:hover .modal-yotube-information-thumbnailImg {
+    transform: scale(1.1);
+    transition: 1s ease;
+}
+
+/* .modal-yotube-information-thumbnailImg-box:focus .fa-play-circle {
+    display: block;
+} */
+
 .modal-yotube-information-type {
-    font-size: 2rem;
+    font-size: 1.2rem;
     font-weight: bold;
 }
 
 .modal-yotube-information-title {
-    font-size: 1.5rem;
+    /* font-size: 1rem; */
 }
 
 .modal-yotube-information-productionDate {
@@ -285,45 +339,56 @@ body {
 
 @media (max-width: 1300px) {
     .header {
-        font-size: 1rem;
+        /* font-size: 1rem; */
     }
 
     .header div {
-        margin: auto;
+        font-size: 1rem;
+        /* margin: auto; */
     }
 
     .header nav {
-        margin: auto;
+        /* margin: auto; */
+        font-size: 0.8rem;
+    }
+
+    #aboutMe {
+        height: 80vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .self-introduction {
-        display: flex;
-        flex-direction: column;
-        border: none;
+        padding: 30px 0;
+        border: 1px solid rgb(48, 48, 48);
+        grid-template-columns: 300px 300px;
+        grid-template-rows: 60px 60px 60px;
+        gap: 0 60px;
     }
 
     .self-introduction-image {
-        width: 100%;
-        height: 400px;
+        /* width: 100%; */
+        /* height: 300px; */
     }
 
-    .self-introduction-company {
-        padding: 1rem;
+    /* .self-introduction-company {
+        padding: 1rem 2rem;
     }
 
     .self-introduction-ceo {
-        padding: 1rem;
+        padding: 1rem 2rem;
     }
 
     .self-introduction-description {
-        padding: 1rem;
-    }
+        padding: 1rem 2rem;
+    } */
 
     .contact-information-email {
-        font-size: 1.5rem;
+        /* font-size: 1.5rem; */
     }
 
-    .fa-youtube {
+    /* .fa-youtube {
         width: 3rem;
         font-size: 2rem;
         bottom: 0.25rem;
@@ -337,10 +402,10 @@ body {
     .fa-instagram {
         width: 3rem;
         font-size: 3rem;
-    }
+    } */
 
     .youtube-videos {
-        width: calc(80vw + 120px);
+        width: calc(80vw + 80px);
     }
 
     .modal-youtube-video-body {
@@ -351,7 +416,7 @@ body {
     .modal-yotube-information {
         width: 40vw;
         height: 33.3vw;
-        gap: 10px;
+        /* gap: 10px; */
     }
 }
 
@@ -368,17 +433,49 @@ body {
         visibility: hidden;
         width: 0;
     }
-
+/* 
     .self-introduction {
         font-size: 1rem;
+    } */
+
+    .self-introduction {
+        width: 500px;
+        display: flex;
+        flex-direction: column;
+        border: none;
     }
 
-    .self-introduction-company {
+    .self-introduction-image {
+        /* width: 71vw; */
+        height: 30vh;
+    }
+
+    /* .self-introduction-company {
+        font-size: 1.5rem;
+    } */
+
+    .contact-information-email {
+        padding-bottom: 1rem;
+    }
+
+    .fa-youtube {
+        padding: calc(5px + 0.25rem) 5px;
+        width: 2rem;
         font-size: 1.5rem;
     }
 
+    .fa-facebook-f {
+        width: 2rem;
+        font-size: 2rem;
+    }
+
+    .fa-instagram {
+        width: 2rem;
+        font-size: 2rem;
+    }
+
     .youtube-videos {
-        width: calc(80vw + 60px);
+        width: 80vw;
     }
 
     .modal-yotube-information {

@@ -95,13 +95,16 @@ function setModalPlayer(el, i) {
     let divModalBg = document.createElement('div');
 
     let divInfo = document.createElement('div');
+    let divInfoImgBox = document.createElement('div');
     let divInfoImg = document.createElement('img');
+    let divInfoImgIcon = document.createElement('i');
     let divInfoType = document.createElement('div');
     let divInfoTitle = document.createElement('div');
     let divInfoProductionDate = document.createElement('div');
 
     divModal.append(divModalBody, divModalBg);
-    divInfo.append(divInfoImg, divInfoType, divInfoTitle, divInfoProductionDate);
+    divInfoImgBox.append(divInfoImg, divInfoImgIcon)
+    divInfo.append(divInfoImgBox, divInfoType, divInfoTitle, divInfoProductionDate);
     div.append(divModal, divInfo);
 
     divModal.className = `modal-youtube-video hidden`;
@@ -110,9 +113,11 @@ function setModalPlayer(el, i) {
     divModalBody.id = `modal-youtube-player${i}`;
     // divModalCloseBtn.className = `modal-yotube-video-close-btn`;
     // divModalCloseBtn.textContent = "X";
+    divInfoImgIcon.className = "far fa-play-circle";
     divModalBg.className = "bg";
 
     divInfo.className = `modal-yotube-information`;
+    divInfoImgBox.className = `modal-yotube-information-thumbnailImg-box`
     divInfoImg.className = `modal-yotube-information-thumbnailImg`;
     divInfoImg.src = el.thumbnailImg;
     divInfoType.className = `modal-yotube-information-type`;

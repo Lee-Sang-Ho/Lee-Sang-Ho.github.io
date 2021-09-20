@@ -98,14 +98,14 @@ function setModalPlayer(el, i) {
     let divInfoImgBox = document.createElement('div');
     let divInfoImg = document.createElement('img');
     let divInfoImgIcon = document.createElement('i');
-    let divInfoType = document.createElement('div');
     let divInfoTitle = document.createElement('div');
+    let divInfoType = document.createElement('div');
     let divInfoProductionDate = document.createElement('div');
 
     divModal.append(divModalBody, divModalBg);
     divInfoImgBox.append(divInfoImg, divInfoImgIcon)
-    divInfo.append(divInfoImgBox, divInfoType, divInfoTitle, divInfoProductionDate);
-    div.append(divModal, divInfo);
+    divInfo.append(divInfoImgBox, divInfoTitle, divInfoType, divInfoProductionDate);
+    div.append(divInfo, divModal);
 
     divModal.className = `modal-youtube-video hidden`;
     divModal.id = `modal-youtube${i}`;
@@ -113,13 +113,13 @@ function setModalPlayer(el, i) {
     divModalBody.id = `modal-youtube-player${i}`;
     // divModalCloseBtn.className = `modal-yotube-video-close-btn`;
     // divModalCloseBtn.textContent = "X";
-    divInfoImgIcon.className = "far fa-play-circle";
     divModalBg.className = "bg";
 
     divInfo.className = `modal-yotube-information`;
     divInfoImgBox.className = `modal-yotube-information-thumbnailImg-box`
     divInfoImg.className = `modal-yotube-information-thumbnailImg`;
     divInfoImg.src = el.thumbnailImg;
+    divInfoImgIcon.className = "far fa-play-circle";
     divInfoType.className = `modal-yotube-information-type`;
     divInfoType.textContent = el.type;
     divInfoTitle.className = `modal-yotube-information-title`;
@@ -137,7 +137,7 @@ function setModalPlayer(el, i) {
         modalPlayerMap[i].pauseVideo();
     }
 
-    divInfoImg.addEventListener("click", modalOpen);
+    divInfoImgIcon.addEventListener("click", modalOpen);
     // divModalCloseBtn.addEventListener("click", modalClose);
     divModalBg.addEventListener("click", modalClose);
 

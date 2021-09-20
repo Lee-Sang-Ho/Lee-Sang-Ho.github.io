@@ -4,7 +4,7 @@ html {
 body {
     margin: 0;
     overflow-x: hidden;
-    font-family: 'Apple SD Gothic Neo','Malgun Gothic',arial,sans-serif;
+    font-family: 'AppleSDGothicNeoH00','Malgun Gothic',arial,sans-serif;
 }
 
 .container {
@@ -24,14 +24,12 @@ body {
     z-index: 9996;
     color: white;
     background-color: rgba(0, 0, 0, 0.7);
-    /* font-size: 1.5rem; */
 }
 
-.header div {
+.header h2 {
     margin: auto 40px;
     padding: 0 10px;
     text-align: center;
-    font-size: 1.5rem;
 }
 
 .header nav {
@@ -71,7 +69,6 @@ body {
 }
 @media (max-aspect-ratio: 16/9) {
   .representative-youtube-video iframe {
-    /* width = 100 / (9 / 16) = 177.777777 */
     width: 177.78vh;
   }
 }
@@ -97,7 +94,6 @@ body {
     position: absolute;
     left: 50%;
     transform: translate(-50%, 0%);
-    /* z-index: 9999; */
 }
 
 .representative-youtube-video-button button {
@@ -125,40 +121,52 @@ body {
     grid-template-areas: 
     "img com"
     "img ceo"
+    "img ski"
     "img des";
-    grid-template-columns: 400px 400px;
-    grid-template-rows: 80px 80px 80px;
-    gap: 0 80px;
+    grid-template-columns: 440px 440px;
+    grid-template-rows: 2rem 2rem 4rem 7rem;
+    gap: 20px 0px;
+    line-height: 1.5rem;
 }
 
 .self-introduction-image {
     grid-area: img;
     justify-self: center;
-    width: 80%;
+    margin: 10% 0;
+    padding: 0 10%;
+    width: 100%;
     height: 100%;
+    text-align: center;
 }
 
 .self-introduction-image img {
-    width: 100%;
+    width: 80%;
     height: 100%;
     object-fit: cover;
 }
 
 .self-introduction-company {
-    padding: 1rem;
+    padding: 10%;
     grid-area: com;
     font-size: 1.5rem;
     font-weight: bold;
 }
 
 .self-introduction-ceo {
-    padding: 1rem;
+    padding: 10%;
     grid-area: ceo;
 }
 
+.self-introduction-skill {
+    padding: 10%;
+    grid-area: ski;
+    text-align: justify;
+}
+
 .self-introduction-description {
-    padding: 1rem;
+    padding: 0 10% 0 10%;
     grid-area: des;
+    text-align: justify;
 }
 
 .contact-information {
@@ -236,6 +244,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 9999;
 }
 
 .modal-youtube-video .bg {
@@ -251,14 +260,6 @@ body {
     height: 38.57vw;
     z-index: 9999;
 }
-
-/* .modal-yotube-video-close-btn {
-    margin: 0 0 calc(38.57vw - 20px) 0;
-    width: 20px;
-    height: 20px;
-    z-index: 9998;
-    background-color: white;
-} */
 
 .hidden {
     display: none;
@@ -301,16 +302,6 @@ body {
     background-color: rgba(0, 0, 0, 0.4);
 }
 
-.fa-play-circle::before {
-    /* align-self: center;
-    justify-self: center; */
-}
-
-/* .modal-yotube-information-thumbnailImg:hover {
-    transform: scale(1.1);
-    transition: 1s ease;
-} */
-
 .modal-yotube-information-thumbnailImg-box:hover .fa-play-circle {
     display: flex;
 }
@@ -320,17 +311,9 @@ body {
     transition: 1s ease;
 }
 
-/* .modal-yotube-information-thumbnailImg-box:focus .fa-play-circle {
-    display: block;
-} */
-
-.modal-yotube-information-type {
+.modal-yotube-information-title {
     font-size: 1.2rem;
     font-weight: bold;
-}
-
-.modal-yotube-information-title {
-    /* font-size: 1rem; */
 }
 
 .modal-yotube-information-productionDate {
@@ -338,17 +321,11 @@ body {
 }
 
 @media (max-width: 1300px) {
-    .header {
-        /* font-size: 1rem; */
-    }
-
-    .header div {
-        font-size: 1rem;
-        /* margin: auto; */
+    .header h2 {
+        font-size: 1.5rem;
     }
 
     .header nav {
-        /* margin: auto; */
         font-size: 0.8rem;
     }
 
@@ -367,43 +344,6 @@ body {
         gap: 0 60px;
     }
 
-    .self-introduction-image {
-        /* width: 100%; */
-        /* height: 300px; */
-    }
-
-    /* .self-introduction-company {
-        padding: 1rem 2rem;
-    }
-
-    .self-introduction-ceo {
-        padding: 1rem 2rem;
-    }
-
-    .self-introduction-description {
-        padding: 1rem 2rem;
-    } */
-
-    .contact-information-email {
-        /* font-size: 1.5rem; */
-    }
-
-    /* .fa-youtube {
-        width: 3rem;
-        font-size: 2rem;
-        bottom: 0.25rem;
-    }
-
-    .fa-facebook-f {
-        width: 3rem;
-        font-size: 3rem;
-    }
-
-    .fa-instagram {
-        width: 3rem;
-        font-size: 3rem;
-    } */
-
     .youtube-videos {
         width: calc(80vw + 80px);
     }
@@ -421,22 +361,15 @@ body {
 }
 
 @media (max-width: 768px) {
-    .header {
-        height: 20px;
-    }
-
-    .header div {
-        margin: auto 1rem;
+    .header h2 {
+        padding: auto 0.3rem;
+        font-size: 1rem;
     }
 
     .header nav {
         visibility: hidden;
         width: 0;
     }
-/* 
-    .self-introduction {
-        font-size: 1rem;
-    } */
 
     .self-introduction {
         width: 500px;
@@ -446,13 +379,25 @@ body {
     }
 
     .self-introduction-image {
-        /* width: 71vw; */
+        margin: 0;
         height: 30vh;
     }
 
-    /* .self-introduction-company {
-        font-size: 1.5rem;
-    } */
+    .self-introduction-company {
+        padding: 1rem;
+    }
+
+    .self-introduction-ceo {
+        padding: 1rem;
+    }
+
+    .self-introduction-skill {
+        padding: 1rem;
+    }
+
+    .self-introduction-description {
+        padding: 1rem;
+    }
 
     .contact-information-email {
         padding-bottom: 1rem;
@@ -483,11 +428,11 @@ body {
         height: 66.7vw;
     }
 
-    .modal-yotube-information-type {
+    .modal-yotube-information-title {
         font-size: 1.5rem;
     }
 
-    .modal-yotube-information-title {
+    .modal-yotube-information-type {
         font-size: 1rem;
     }
 

@@ -4,7 +4,7 @@ let backgroundPlayerList = [
     '2BJBIgVn164',
     'KfXTdTE9IRo',
     'C2Tz3bj1sZw',
-    '7b_6d1tFg_8',
+    
 ];
 
 let modalPlayerInfo = [
@@ -50,14 +50,7 @@ let modalPlayerInfo = [
         type: "DID",
         productionDate: "Aug 20, 2021"
     },
-    {
-        videoId: "7b_6d1tFg_8",
-        thumbnailImg: "./img/무빙포스터.png",
-        title: "무빙 포스터 (Moving poster)",
-        type: "익스프레션 코드를 이용한 기하학적 표현",
-        productionDate: "Aug 19, 2021"
-    },
-    {
+        {
         videoId: "KfXTdTE9IRo",
         thumbnailImg: "./img/또그팟2편.png",
         title: "또그팟_2편",

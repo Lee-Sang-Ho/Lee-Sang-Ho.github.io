@@ -50,7 +50,7 @@ let modalPlayerInfo = [
         type: "DID",
         productionDate: "Aug 20, 2021"
     },
-        {
+    {
         videoId: "KfXTdTE9IRo",
         thumbnailImg: "./img/또그팟2편.png",
         title: "또그팟_2편",

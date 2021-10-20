@@ -4,7 +4,7 @@ let backgroundPlayerList = [
     '2BJBIgVn164',
     'KfXTdTE9IRo',
     'C2Tz3bj1sZw',
-    
+    '7b_6d1tFg_8', 
 ];
 
 let modalPlayerInfo = [
@@ -57,6 +57,13 @@ let modalPlayerInfo = [
         type: "토크, 인터뷰",
         productionDate: "Sep 14, 2021"
     },
+    {
+        videoId: "7b_6d1tFg_8",
+        thumbnailImg: "./img/무빙포스터.png",
+        title: "무빙포스터",
+        type: "익스프레션코드로 기하학적표현",
+        productionDate: "Sep 14, 2021"
+    },
+    
 ]
-
 export {backgroundPlayerList, modalPlayerInfo};
